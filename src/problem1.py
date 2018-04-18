@@ -2,8 +2,8 @@
 Exam 2, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  April 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Lilin Chen.  April 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -12,7 +12,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the code of the  Rect  class below.
+# DONE: 2.  READ the code of the  Rect  class below.
 #
 #   Once you are confident that you understand the  Rect  class and its code,
 #   change the TO-DO for this problem to DONE.
@@ -29,12 +29,20 @@ class Rect(object):
 def run_test_problem1():
     """ Tests the   problem1   function. """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement at least 2 tests of the  problem1  function.
+    # DONE: 3. Implement at least 2 tests of the  problem1  function.
     # -------------------------------------------------------------------------
     print()
     print('--------------------------------------------------')
     print('Testing the   problem1   function:')
     print('--------------------------------------------------')
+
+    # Test 1
+    print('Expected: ', 762)
+    print('Actual: ', problem1([Rect(5, 10), Rect(4, 3), Rect(100, 7)]))
+
+    # Test 2
+    print('Expected: ', 81)
+    print('Actual: ', problem1([Rect(2, 30), Rect(1, 4), Rect(4, 3), Rect(5, 1)]))
 
 
 def problem1(rectangles):
@@ -53,8 +61,15 @@ def problem1(rectangles):
     :return: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # -------------------------------------------------------------------------
+
+    sum = 0
+
+    for k in range(len(rectangles)):
+        sum = sum + (rectangles[k].w * rectangles[k].h)
+
+    return sum
 
 
 # -----------------------------------------------------------------------------
